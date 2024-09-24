@@ -30,13 +30,14 @@
     <div id="div1" class="containerdiv1">
         <h1 id="intro">Olá, meu nome é: <br><span>Eduardo</span></h1> 
         <div id="profile-info">
-            <section>
-                <a href="assets/Currículo Eduardo.pdf" class="btn-download" type="application/pdf" download="Eduardo dos Reis Vaz0.pdf">
+        
+            <img src="imagens/imginici.jpg" alt="Foto de Eduardo" id="img1">
+            <h2 id="containerdiv2">Developer <span style="color: orange;">Front-End</span></h2>
+            <section></section>
+                <a href="assets/Eduardo dos Reis Vaz.pdf" class="btn-download" type="application/pdf" download="Eduardo dos Reis Vaz0.pdf">
                     <i class="bi bi-file-earmark-arrow-down"></i> Download CV
                 </a>
             </section>
-            <img src="imagens/imginici.jpg" alt="Foto de Eduardo" id="img1">
-            <h2 id="containerdiv2">Developer <span style="color: orange;">Front-End</span></h2>
         </div>
     </div>
     
@@ -100,25 +101,26 @@
     </details>
 
     <h2>Projetos</h2>
-    <section id="historico-profissional">
-       <div class="carrossel-container">
-  <button id="anterior" class="btn-carrossel">&lt;</button>
-  
-  <div class="carrossel-item">
-    <img src="imagens/cronômetro.png" alt="Projeto 1">
-    <h3>Cronômetro</h3>
-    <p>Este projeto básico se baseia em um cronômetro, com casas de minutos, segundos e milhassimas. Com uma conexão com o banco de dados mysql, o servidor utilizado foi o WampServer. Ele foi feito para um trabalho simples de faculdade, focado na introdução orientada a objetos em java e BD.</p>
-    <a href="link-do-projeto-1">Ver Projeto</a>
-  </div>
-  <div class="carrossel-item">
-    <img src="imagens/persgithub.jpg" alt="Projeto 1">
-    <h3>READ.me GitHub</h3>
-    <p></p>
-    <a href="https://github.com/eduardoreise/eduardoreise">Ver Projeto</a>
-  </div>
-
-  <button id="proximo" class="btn-carrossel">&gt;</button>
+    <div class="carousel-container">
+        <div class="carousel">
+            <a href="https://github.com/eduardoreise/Cronometro" target="_blank">
+                <img src="imagens/cronômetro.png" alt="Project 1">
+            </a>
+            <a href="https://github.com/eduardoreise/eduardoreise" target="_blank">
+                <img src="imagens/persgithub.jpg" alt="Project 1">
+            </a>
+            <a href="https://github.com/eduardoreise/ciee-setembroamarelo" target="_blank">
+                <img src="imagens/setamarelo.png" alt="Project 1">
+            </a>
+            
+    </div>
+    
 </div>
+    
+    
+
+        
+          
 
     </section>
     
@@ -279,128 +281,6 @@ Se você tiver qualquer dúvida, comentário ou solicitação sobre esta Políti
     
     
     <script src="javascript.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-        const skillsContainer = document.querySelector('.skills-container');
-    
-    
-        fetch('.API/skill/skills.json')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(skill => {
-                    const skillCard = `
-                        <div class="skill-card">
-                            <img src="${skill.image}" alt="${skill.title}">
-                            <h3>${skill.title}</h3>
-                            <p>${skill.description}</p>
-                        </div>
-                    `;
-                    skillsContainer.innerHTML += skillCard;
-                });
-            })
-            .catch(error => console.error('Erro ao carregar as habilidades:', error));
-        
-        let scrollAmount = 0;
-        let autoScrollInterval;
-    
-        function autoScrollSkills() {
-            autoScrollInterval = setInterval(() => {
-                if (scrollAmount <= skillsContainer.scrollWidth - skillsContainer.clientWidth) {
-                    skillsContainer.scrollTo({
-                        top: 0,
-                        left: scrollAmount,
-                        behavior: 'smooth'
-                    });
-                    scrollAmount += 220;
-                } else {
-                    scrollAmount = 0;
-                }
-            }, 2000);
-        }
-    
-        skillsContainer.addEventListener('mouseover', () => {
-            clearInterval(autoScrollInterval);
-        });
-    
-        skillsContainer.addEventListener('mouseout', () => {
-            autoScrollSkills();
-        });
-    
-        autoScrollSkills();
-    });
-    </script>
-    
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const projetosCarrossel = document.getElementById("projetos-carrossel");
-    const jsonApiUrl = ".api/project/projetos.json";
-
-    // Função para carregar os projetos do GitHub
-    function carregarProjetos() {
-        const username = "eduardoreise";
-        const githubApiUrl = `https://api.github.com/users/${username}/repos`;
-
-        fetch(githubApiUrl)
-            .then(response => response.json())
-            .then(projetosGitHub => {
-                return fetch(jsonApiUrl)
-                    .then(response => response.json())
-                    .then(imagensProjetos => {
-                        return { projetosGitHub, imagensProjetos };
-                    });
-            })
-            .then(({ projetosGitHub, imagensProjetos }) => {
-                projetosGitHub.forEach(projeto => {
-                    const projetoItem = document.createElement("div");
-                    projetoItem.classList.add("carrossel-item");
-
-
-                    const imagemProjeto = imagensProjetos.find(imagem => imagem.name === projeto.name);
-                    const imgSrc = imagemProjeto ? imagemProjeto.image_url : "https://via.placeholder.com/300x180.png?text=Sem+Imagem";//caso não tenha
-
-    
-                    projetoItem.innerHTML = `
-                        <img src="${imgSrc}" alt="${projeto.name}">
-                        <h3>${projeto.name}</h3>
-                        <p>${projeto.description || "Sem descrição disponível"}</p>
-                        <a href="${projeto.html_url}" target="_blank">Ver Projeto</a>
-                    `;
-
-
-                    projetosCarrossel.appendChild(projetoItem);
-                });
-            })
-            .catch(error => {
-                console.error("Erro ao carregar projetos:", error);
-                projetosCarrossel.innerHTML = "<p>Erro ao carregar os projetos.</p>";
-            });
-    }
-
-    
-    carregarProjetos();
-});
-
-const carrossel = document.getElementById('projetos-carrossel');
-
-
-const btnAnterior = document.getElementById('anterior');
-const btnProximo = document.getElementById('proximo');
-
-
-btnAnterior.addEventListener('click', () => {
-  carrossel.scrollBy({
-    left: -400, 
-    behavior: 'smooth'
-  });
-});
-
-
-btnProximo.addEventListener('click', () => {
-  carrossel.scrollBy({
-    left: 400, 
-    behavior: 'smooth'
-  });
-});
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
