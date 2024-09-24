@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="javascript.js"></script>
+    <script src="api/SKILL/script.js"></script>
+    <script src="api/project/api.js"></script>
+    
+    
+</head>
+<body>
+    <nav>
+        <section id="nav-section">
+            <img src="imagens/logo.png" width="40" id="navlog">
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button> 
+            <div class="menu">
+                <a href="index.html" id="sechome">HOME</a>
+                <a href="#skills-section" id="secskill">SKILL</a>
+                <a href="#servisos">SERVIÇOS</a>
+                <a href="#contato1" id="contato">CONTATO</a>
+            </div>
+        </section>
+    </nav>
+    
+    <div id="div1" class="containerdiv1">
+        <h1 id="intro">Olá, meu nome é: <br><span>Eduardo</span></h1> 
+        <div id="profile-info">
+            <section>
+                <a href="assets/Currículo Eduardo.pdf" class="btn-download" type="application/pdf" download="Eduardo dos Reis Vaz0.pdf">
+                    <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+                </a>
+            </section>
+            <img src="imagens/imginici.jpg" alt="Foto de Eduardo" id="img1">
+            <h2 id="containerdiv2">Developer <span style="color: orange;">Front-End</span></h2>
+        </div>
+    </div>
+    
+    
+
+    <hr id="linha1">
+    
+    <section id="skills-section">
+        <h2>Minhas Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="imagens/html.png" alt="HTML">
+                <h3>HTML</h3>
+                <p>Desenvolvimento Estruturado e responsivo com HTML5</p>
+            </div>
+            <div class="skill-card">
+                <img src="imagens/css.jpg" alt="CSS">
+                <h3>CSS</h3>
+                <p>Estilização moderna e responsiva</p>
+            </div>
+            <div class="skill-card">
+                <img src="imagens/js.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <p>Desenvolvimento interativo e dinâmico</p>
+            </div>
+            <div class="skill-card">
+                <img src="imagens/bootstrap.png" alt="Bootstrap">
+                <h3>Bootstrap</h3>
+                <p>Interfaces responsivas com Bootstrap</p>
+            </div>
+            <div class="skill-card">
+                <img src="imagens/java.png" alt="Java">
+                <h3>Java</h3>
+                <p>Aplicações e construções de Telas</p>
+            </div>
+            <div class="skill-card">
+                <img src="imagens/joson.png" alt="Java">
+                <h3>Joson</h3>
+                <p>Formato leve para troca de dados e fácil leitura.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+      
+
+   <hr id="linha1">
+
+
+
+
+
+  <section id="historico-profissional">
+    <h2 id="servisos">Histórico Profissional</h2>
+
+    <details>
+        <summary>Freelance</summary>
+        <p id="summaryp">
+            Experiência em design e TI, incluindo manutenção de computadores, desenvolvimento web, e suporte técnico para clientes individuais. Projetos concluídos envolvem criação de portfólios, websites responsivos e automação de sistemas.
+        </p>
+    </details>
+
+    <h2>Projetos</h2>
+    <section id="historico-profissional">
+       <div class="carrossel-container">
+  <button id="anterior" class="btn-carrossel">&lt;</button>
+  
+  <div class="carrossel-item">
+    <img src="imagens/cronômetro.png" alt="Projeto 1">
+    <h3>Cronômetro</h3>
+    <p>Este projeto básico se baseia em um cronômetro, com casas de minutos, segundos e milhassimas. Com uma conexão com o banco de dados mysql, o servidor utilizado foi o WampServer. Ele foi feito para um trabalho simples de faculdade, focado na introdução orientada a objetos em java e BD.</p>
+    <a href="link-do-projeto-1">Ver Projeto</a>
+  </div>
+  <div class="carrossel-item">
+    <img src="imagens/bootstrap.png" alt="Projeto 1">
+    <h3>READ.me GitHub</h3>
+    <p></p>
+    <a href="https://github.com/eduardoreise/eduardoreise">Ver Projeto</a>
+  </div>
+
+  <button id="proximo" class="btn-carrossel">&gt;</button>
+</div>
+
+    </section>
+    
+    
+    
+</section>
+
+    
+
+
+    <hr id="linha1">
+
+    
+    <div class="containerconcat" id="contato1">
+    <h1>Contato</h1>
+    <form target="_blank" action="https://formsubmit.co/eduardo2019contato@gmail.com" method="POST">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Seu nome:" required>
+                </div>
+                <div class="col">
+                    <input type="email" name="email" class="form-control" placeholder="Endereço de email:" required>
+                </div>
+                <div class="col">
+                    <input type="tel" name="telefone" class="form-control" placeholder="Digite seu Telefone:" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Sua mensagem" class="form-control" name="message" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg btn-dark btn-block">ENVIAR</button>
+
+        <input type="hidden" name="_autoresponse" value="Em breve entraremos em contato!">
+        <input type="hidden" name="_captcha" value="false"> 
+    </form>
+</div>
+
+      
+    
+<footer id="footer-section">
+    <div id="social-media">
+        <a href="https://www.linkedin.com/in/eduardodosreis18" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.youtube.com/@Dev.Lândia" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://github.com/eduardoreise" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:eduardo2019contato@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.instagram.com/dev.eduh/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/qr/B5W62JBJ7OSAA1" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <br>
+    <div id="footer-links">
+        <a href="javascript:void(0)" onclick="mostrarMensagem()"><i class="bi bi-journal-bookmark-fill"></i>ﾠPolítica de Privacidade</a>
+    </div><br>
+    <div id="contact-info">
+        <p>Telefone: (62) 99148-5401</p>
+        <p>Endereço: R. V. Liverdino Fernandes, Aparecida de Goiânia, GO</p>
+    </div><br>
+    <p>Copyright &copy; 2024 MyProfile - Todos os direitos reservados</p>
+</footer>
+    
+
+
+    <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <span class="close-alert">&times;</span>
+            <h2 id="politica">Política de Privacidade</h2>
+            <p id="alertMessage">
+                Esta Política de Privacidade descreve como o MyProfile coleta, usa, armazena, compartilha e protege as informações pessoais dos usuários de nossos serviços. Estamos comprometidos em proteger a privacidade dos nossos usuários e em adotar práticas de privacidade que estejam em conformidade com a Lei Geral de Proteção de Dados (LGPD) e o Regulamento Geral de Proteção de Dados (GDPR), entre outras legislações aplicáveis.
+<br><br>
+1. Definições
+
+    Para os fins desta Política de Privacidade, os seguintes termos terão os significados estabelecidos abaixo: <br>
+
+    -Dados Pessoais: Qualquer informação relacionada a uma pessoa física identificada ou identificável. <br>
+    -Controlador de Dados: A pessoa ou entidade que determina as finalidades e os meios de processamento dos Dados Pessoais. <br>
+    -Operador de Dados: A pessoa ou entidade que processa os Dados Pessoais em nome do Controlador de Dados. <br>
+    -Titular dos Dados: A pessoa física a quem os Dados Pessoais dizem respeito.
+
+    <br><br>
+2. Coleta de Dados Pessoais
+
+Coletamos diferentes tipos de informações pessoais para fornecer e melhorar nossos serviços, incluindo, mas não se limitando a: <br>
+
+-Informações de Identificação Pessoal (IIP): Nome, endereço, e-mail, número de telefone, número de documento de identificação, etc. <br>
+-Informações de Navegação: Endereço IP, tipo de navegador, idioma preferido, data e hora de acesso, histórico de navegação, e outros dados coletados automaticamente por cookies e tecnologias similares. <br>
+-Informações de Transação: Detalhes sobre pagamentos e transações realizadas através de nossos serviços. <br>
+-Dados Sensíveis: Dados sobre origem racial ou étnica, opiniões políticas, crenças religiosas ou filosóficas, dados sobre saúde ou vida sexual, quando aplicável e estritamente necessário, conforme a lei. <br><br>
+
+3. Os Dados Pessoais coletados serão utilizados para as seguintes finalidades: <br>
+
+-Fornecimento de Serviços: Para permitir o uso dos serviços oferecidos pela MyProfile, incluindo a criação de contas, processamento de pagamentos, comunicação com usuários, etc. <br>
+-Personalização: Para oferecer uma experiência personalizada ao usuário, sugerindo produtos ou serviços baseados em seus interesses e histórico de uso. <br>
+-Comunicação: Para responder às solicitações do usuário, enviar notificações importantes e informações sobre atualizações ou mudanças em nossos serviços. <br>
+-Marketing e Promoções: Para enviar comunicações promocionais e ofertas personalizadas, sempre respeitando o direito do usuário de optar ou não por esse tipo de comunicação. <br>
+-Cumprimento de Obrigações Legais: Para cumprir com as obrigações legais e regulatórias às quais estamos sujeitos, incluindo a cooperação com autoridades governamentais e judiciais. <br>
+-Segurança e Prevenção de Fraudes: Para proteger nossos usuários e nossos sistemas contra ameaças à segurança, incluindo a prevenção e detecção de atividades fraudulentas ou ilícitas. <br><br>
+4. Compartilhamento de Dados <br>
+
+A MyProfile poderá compartilhar os Dados Pessoais com terceiros apenas nos seguintes casos: <br>
+
+-Prestadores de Serviços: Compartilhamos informações com empresas parceiras que auxiliam na operação do nosso negócio, tais como provedores de hospedagem, processadores de pagamento e serviços de atendimento ao cliente. Esses prestadores de serviço estão obrigados por contrato a manter a confidencialidade dos dados e a utilizá-los apenas para a execução dos serviços contratados. <br>
+-Cumprimento de Lei: Poderemos divulgar informações pessoais para cumprir com a lei, responder a uma ordem judicial ou proteger os direitos, propriedade ou segurança da MyProfile, de nossos usuários ou de terceiros. <br>
+-Fusões e Aquisições: Em caso de fusão, aquisição ou venda de ativos da empresa, os Dados Pessoais poderão ser transferidos como parte da transação. O usuário será informado caso tal situação ocorra, e terá o direito de optar por continuar ou não com o uso de seus dados. <br>
+-Com Consentimento: Compartilharemos informações com terceiros para finalidades distintas daquelas mencionadas acima somente com o consentimento expresso do titular dos dados. <br><br>
+5. Direitos do Titular dos Dados <br>
+
+Os titulares dos dados possuem diversos direitos em relação aos seus Dados Pessoais, conforme garantido pela LGPD e pelo: <br>
+
+-Direito de Acesso: O titular tem o direito de solicitar informações sobre os dados coletados, as finalidades do tratamento e quem tem acesso a eles. <br>
+-Direito de Correção: O titular pode solicitar a correção ou atualização de dados pessoais incorretos, incompletos ou desatualizados. <br>
+-Direito à Exclusão: O titular pode solicitar a exclusão de seus dados, desde que não exista uma obrigação legal que nos obrigue a mantê-los. <br>
+-Direito de Oposição: O titular tem o direito de se opor ao tratamento de seus dados quando julgar que seus direitos e liberdades fundamentais foram violados. <br>
+-Direito de Portabilidade: O titular pode solicitar que seus dados sejam transferidos para outro controlador, em um formato estruturado e de uso comum. <br>
+-Direito de Revogar Consentimento: Caso o tratamento dos dados seja baseado em consentimento, o titular pode revogá-lo a qualquer momento. <br><br>
+6. Segurança dos Dados <br>
+
+A segurança dos seus dados é nossa prioridade. Implementamos medidas de segurança técnicas e organizacionais adequadas para proteger os Dados Pessoais contra acessos não autorizados, perda, destruição ou alteração. As nossas medidas de segurança incluem: <br>
+
+-Criptografia: Utilizamos tecnologias de criptografia para proteger os dados transmitidos entre os nossos sistemas e os dos usuários. <br>
+-Controles de Acesso: Limitamos o acesso aos Dados Pessoais apenas a funcionários ou prestadores de serviços que precisam dessas informações para desempenhar suas funções. <br>
+-Monitoramento de Segurança: Nossos sistemas são continuamente monitorados para detectar e responder a possíveis vulnerabilidades e ameaças à segurança. <br>
+-No entanto, é importante lembrar que nenhum sistema é 100% seguro, e não podemos garantir a segurança absoluta de suas informações. <br><br>
+
+7. Retenção de Dados <br>
+
+-Os Dados Pessoais serão mantidos pelo período necessário para cumprir as finalidades para as quais foram coletados, a menos que seja exigido ou permitido por lei um período de retenção mais longo. Ao fim desse período, os dados serão eliminados de maneira segura ou anonimizados. <br><br>
+
+8. Cookies e Tecnologias de Rastreamento <br>
+
+-Utilizamos cookies e outras tecnologias de rastreamento para coletar informações sobre a interação dos usuários com nossos serviços, a fim de melhorar a experiência e fornecer conteúdos personalizados. Os tipos de cookies que utilizamos incluem: <br>
+
+-Cookies Essenciais: Necessários para o funcionamento correto do site e de nossos serviços. <br>
+-Cookies de Desempenho: Utilizados para analisar o desempenho do site e como os usuários interagem com ele. <br>
+-Cookies de Funcionalidade: Permitem que o site se lembre de escolhas feitas pelo usuário, como idioma preferido ou região. <br>
+-Cookies de Marketing: Usados para rastrear a atividade do usuário com o objetivo de oferecer publicidade relevante. <br>
+-O usuário pode gerenciar suas preferências de cookies através das configurações do navegador. No entanto, a desativação de cookies essenciais pode afetar a funcionalidade de alguns serviços. <br><br>
+
+9. Transferência Internacional de Dados <br>
+
+-Seus Dados Pessoais podem ser transferidos e processados fora do Brasil, em países que não possuem leis de proteção de dados equivalentes àquelas em vigor no Brasil. Nesses casos, tomaremos as medidas necessárias para garantir que seus dados sejam protegidos de acordo com esta Política de Privacidade e com as leis aplicáveis. <br><br>
+
+10. Alterações a Esta Política de Privacidade <br>
+
+-A MyProfile reserva-se o direito de atualizar esta Política de Privacidade a qualquer momento, para refletir mudanças em nossas práticas ou em conformidade com a legislação. Quando fizermos alterações significativas, notificaremos os usuários por meio de um aviso em destaque em nosso site ou por outros meios apropriados. <br><br>
+
+11. Como Entrar em Contato Conosco <br>
+
+Se você tiver qualquer dúvida, comentário ou solicitação sobre esta Política de Privacidade ou sobre como tratamos seus Dados Pessoais, entre em contato conosco através dos seguintes meios:
+<br>
+     E-mail: devlandia.dev@gmail.com;<br>
+     Endereço: Rua Vereador Liverdino Fernandes, 1, Aparecida de Goiânia, GO;<br>
+     Telefone:(62) 99148-5401.
+            </p>
+        </div>
+    </div>
+    
+    
+    
+    <script src="javascript.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const skillsContainer = document.querySelector('.skills-container');
+    
+    
+        fetch('.API/skill/skills.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(skill => {
+                    const skillCard = `
+                        <div class="skill-card">
+                            <img src="${skill.image}" alt="${skill.title}">
+                            <h3>${skill.title}</h3>
+                            <p>${skill.description}</p>
+                        </div>
+                    `;
+                    skillsContainer.innerHTML += skillCard;
+                });
+            })
+            .catch(error => console.error('Erro ao carregar as habilidades:', error));
+        
+        let scrollAmount = 0;
+        let autoScrollInterval;
+    
+        function autoScrollSkills() {
+            autoScrollInterval = setInterval(() => {
+                if (scrollAmount <= skillsContainer.scrollWidth - skillsContainer.clientWidth) {
+                    skillsContainer.scrollTo({
+                        top: 0,
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                    scrollAmount += 220;
+                } else {
+                    scrollAmount = 0;
+                }
+            }, 2000);
+        }
+    
+        skillsContainer.addEventListener('mouseover', () => {
+            clearInterval(autoScrollInterval);
+        });
+    
+        skillsContainer.addEventListener('mouseout', () => {
+            autoScrollSkills();
+        });
+    
+        autoScrollSkills();
+    });
+    </script>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const projetosCarrossel = document.getElementById("projetos-carrossel");
+    const jsonApiUrl = ".api/project/projetos.json";
+
+    // Função para carregar os projetos do GitHub
+    function carregarProjetos() {
+        const username = "eduardoreise";
+        const githubApiUrl = `https://api.github.com/users/${username}/repos`;
+
+        fetch(githubApiUrl)
+            .then(response => response.json())
+            .then(projetosGitHub => {
+                return fetch(jsonApiUrl)
+                    .then(response => response.json())
+                    .then(imagensProjetos => {
+                        return { projetosGitHub, imagensProjetos };
+                    });
+            })
+            .then(({ projetosGitHub, imagensProjetos }) => {
+                projetosGitHub.forEach(projeto => {
+                    const projetoItem = document.createElement("div");
+                    projetoItem.classList.add("carrossel-item");
+
+
+                    const imagemProjeto = imagensProjetos.find(imagem => imagem.name === projeto.name);
+                    const imgSrc = imagemProjeto ? imagemProjeto.image_url : "https://via.placeholder.com/300x180.png?text=Sem+Imagem";//caso não tenha
+
+    
+                    projetoItem.innerHTML = `
+                        <img src="${imgSrc}" alt="${projeto.name}">
+                        <h3>${projeto.name}</h3>
+                        <p>${projeto.description || "Sem descrição disponível"}</p>
+                        <a href="${projeto.html_url}" target="_blank">Ver Projeto</a>
+                    `;
+
+
+                    projetosCarrossel.appendChild(projetoItem);
+                });
+            })
+            .catch(error => {
+                console.error("Erro ao carregar projetos:", error);
+                projetosCarrossel.innerHTML = "<p>Erro ao carregar os projetos.</p>";
+            });
+    }
+
+    
+    carregarProjetos();
+});
+
+const carrossel = document.getElementById('projetos-carrossel');
+
+
+const btnAnterior = document.getElementById('anterior');
+const btnProximo = document.getElementById('proximo');
+
+
+btnAnterior.addEventListener('click', () => {
+  carrossel.scrollBy({
+    left: -400, 
+    behavior: 'smooth'
+  });
+});
+
+
+btnProximo.addEventListener('click', () => {
+  carrossel.scrollBy({
+    left: 400, 
+    behavior: 'smooth'
+  });
+});
+
+    </script>
+</body>
+</html>
