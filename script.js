@@ -27,3 +27,4 @@ carousel.addEventListener('mouseover', () => {
 carousel.addEventListener('mouseout', () => {
     autoScrollInterval = setInterval(autoScroll, scrollInterval);
 });
+
